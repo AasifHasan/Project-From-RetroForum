@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro</title>
+    <!-- Daisy and Tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style -->
+    <style>
+      .font-mulish {
+        font-family: "Mulish", sans-serif;
+      }
+    </style>
+    <!-- Font-Awesome -->
+    <script
+      src="https://kit.fontawesome.com/31153d2eac.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="font-mulish">
+    <header class="container mx-auto px-3 lg:px-10">
+      <!-- Nav bar -->
+      <nav class="mb-8">
+        <div class="navbar justify-between items-center">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"/>
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Home</a></li>
+                <li><a>User</a></li>
+                <li><a>Edit</a></li>
+                <li><a>Join</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl"
+              ><img
+                class="w-[104px] h-[44px]"
+                src="images/logo.png"
+                alt=""
+                srcset=""/></a>
+          </div>
+          <div class="items-center">
+            <div class="navbar-center hidden lg:flex">
+              <ul
+                class="menu menu-horizontal px-1 justify-end items-center space-x-3 text-xl">
+                <li class="border rounded-[30px]">
+                  <a class=""><i class="fa-solid fa-house"></i></a>
+                </li>
+
+                <li class="border rounded-[50px]">
+                  <a><i class="fa-solid fa-pen"></i></a>
+                </li>
+
+                <li class="border rounded-[50px]">
+                  <a class=""><i class="fa-solid fa-user-plus"></i></a>
+                </li>
+
+                <li class="border rounded-[50px]">
+                  <a><i class="fa-solid fa-flag"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="">
+              <a
+                class="rounded-[50px] px-4 py-2 text-white bg-[#797DFC] text-balance font-bold"
+                >Sign In</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero Section -->
+      <div class="bg-[#12132D] rounded-[32px]">
+        <div
+        class="hero min-h-[79vh] bg-[url('/images/bgbanner.png')] rounded-[32px]">
+        <div
+          class="hero-content flex-col lg:flex-row-reverse w-full gap-4 lg:gap-36">
+          <div>
+            <div
+              class="max-w-sm rounded-lg shadow-2xl bg-white flex justify-evenly gap-5 p-7">
+              <div class="space-y-2">
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">Registered user</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">Forum</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">Topics</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">Replies</p>
+              </div>
+              <div class="space-y-2">
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">01</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">05</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">01</p>
+                <p class="font-medium text-[20px] lg:text-[24px] text-[#12132DCC]">03</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <h1 class="text-5xl text-center lg:text-left">
+              <span class="text-white font-black ">Welcome to the</span>
+              <span class="font-black text-[#797DFC]">ReTro</span> <span class="font-black text-white">Forum</span>
+            </h1>
+            <p class="py-6 font-medium text-[20px] text-[#FFFFFFCC] text-center">
+              Share your favorite opinion and win and wp<br />forum coffee mug!
+            </p>
+            <label class="input input-bordered flex justify-self-center items-center w-[70%]">
+              <input id="search-field"
+                type="text"
+                class="grow w-[70%]"
+                placeholder="Search here"/>
+              <button onclick="searchCatagory()" class=" text-white bg-[#797DFC] rounded-[20px] px-2 lg:px-3 py-2 lg:py-2  flex justify-center items-center">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </label>
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <main class="container mx-auto px-3 lg:px-10">
+        <!-- Let's Discuss Section -->
+        <section class="mt-10 space-y-5 mb-24">
+          <h1 class="text-center text-4xl font-black">Let's Discuss</h1>
+          <p class="text-center text-lg text-[#12132D99]">Engage and connect! Share your thoughts, questions, and insights in our vibrant discussion hub. Let's spark meaningful conversations together!
+          </p>
+          <div id="spinner" class="flex justify-center items-center h-[100px] mt-20 hidden">
+            <span class="loading loading-spinner loading-lg"></span>
+          </div>
+          <div class="flex gap-3 lg:gap-6">
+            
+            <!-- Info -->
+            <div id="email-container" class="w-[60%] flex flex-col gap-3 lg:gap-6">
+            </div>
+            <!-- Title -->
+            <div class="w-[40%]">
+              <div class="bg-[#12132D0D] p-[7px] lg:p-6 rounded-xl space-y-2">
+                <!-- Title and mark read -->
+                <div class="flex justify-between items-center">
+                  <span class="text-black text-[10px] lg:text-[20px] font-bold">Title</span> 
+                  <span class="text-[10px] lg:text-[16px] text-[#12132D99]  text-center">Mark as Read <span id="mark-read" class="text-black"> <span></span> </span>
+                </div>
+                <!-- 10 kids mark read -->
+                <!-- Mark as read parent div -->
+                <div id="mark-as-read" class="flex flex-col gap-2">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Join Our Forum Section -->
+      <div class="hero min-h-[70vh] bg-[#12132D] mb-24 rounded-[32px]">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="images/joinforum.png" class="w-[80%] lg:w-[25%] block mr-0 lg:mr-16 rounded-lg shadow-2xl" />
+          <div class="flex flex-col justify-center items-center text-center">
+            <h1 class="text-4xl font-black text-white">Join Our Forum</h1>
+            <p class="py-6 text-lg text-[#FFFFFFCC] lg:w-1/2">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+            <button class="btn btn-primary bg-[#797DFC] text-xl font-bold text-[#FFFFFF] rounded-3xl">Register Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Latest Post -->
+      <section class="mb-10">
+
+        <h1 class="text-center text-4xl font-black mb-2">Latest Post</h1>
+        <p class="text-center text-lg text-[#12132D99]">Stay updated with our latest posts! Don't miss out to Explore fresh content, news, and insights right at your fingertips.</p>
+        <!-- Latest Cards -->
+        <div id="latest-container" class=" grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-4 mt-10 justify-center items-center flex flex-col lg:flex-row">
+        </div>   
+    </main>
+    <footer class="footer footer-center p-10 text-primary-content bg-[#ececf5]">
+        <aside>
+          
+          <h2 class="font-black text-4xl text-[#12132D]">
+            ReTro
+          </h2> 
+          <p class="text-[#12132DB3] lg:w-[70%]">Stay connected with us! Explore more, learn more, and stay updated with our latest news, updates, and offers.</p>
+          
+        </aside> 
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+            <a class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
+            <a class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
+            <a class="text-black"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+          </div>
+        </nav>
+        <div class="w-full flex justify-center items-center"><hr class="border-[1px] border-dashed border-gray-400 w-[70%]" /></div>
+        <p class="text-black">Copyright © 2024 - All right reserved</p>
+      </footer>
+  
+      <script src="script/script.js"></script>    
+   </body> 
+</html>    
